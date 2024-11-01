@@ -1,0 +1,58 @@
+questions = [
+    {
+        "prompt" : "What is the capital of Australia?",
+        "options" : ["A. sydney", "B. Melbourne", "C. canberra", "D. brisbane"],
+        "Answer" : "C"
+    },
+
+    {
+        "prompt" : " What is the chemical symbol for gold?",
+        "options" : ["A. Au", "B. Ag", "C. Pb", "D. Fe"],
+        "Answer" : "A"
+
+    },
+
+    {
+        "prompt" : "Which planet is known as the 'Red Planet'?",
+        "options" : ["A. venus", "B. Jupyter", "C. Mars", "D. Saturn"],
+        "Answer" : "C"
+
+    },
+
+    {
+        "prompt" : "Who wrote the play Romeo and Juliet?",
+        "options" : ["A. Charles Dickens", "B. Mark Twain", "C. William Shakespeare", "D. J.K. Rowling"],
+        "Answer" : "C"
+
+
+    },
+
+    {
+        "prompt" : "What is the largest mammal in the world?",
+        "options" : ["A. African Elephant", "B. Blue Whale", "C. Giant Squid", "D. Giraffe"],
+        "Answer" : "B"
+        
+    }
+
+]
+
+def run_quiz(questions):
+    score = 0
+    for question in questions:
+        print(question["prompt"])
+        for option in question["options"]:
+            print(option)
+
+        answer = input("enter your answer (A, B, C or D): ")
+
+        if answer == question["Answer"]:
+            print("correct answer, weldone \n" )
+            score += 1
+
+        else:
+            print("wrong answer, improve \n")
+
+    print("you got", score, "out of", len(questions), "questions correct")
+
+run_quiz(questions)
+    
