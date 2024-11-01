@@ -1,0 +1,38 @@
+menu = {
+    "peribites" : 400,
+    "pizza" : 150,
+    "pasta" : 250,
+    "burger" : 180,
+    "coffee" : 90,
+    "capachino" : 50,
+    "milkshake" : 450,
+    "fries" : 190
+}
+        
+        
+
+def place_order():
+    print("welcome to the restaurant")
+    print("what would you like to oder from our menu" )
+    print("peribites : Rs 400 \npizza : Rs 150\npasta : 250\nburger : Rs 180\ncoffee : 90\ncapachino : Rs 50\nmilkshake : 450\nfries : 190")
+    
+    total_order = 0
+    item_1 = input("enter your order: ")
+    if item_1 in menu:
+        total_order += menu[item_1]
+        print("your order", item_1, "has been placed")
+    else:
+        print("Sorry this item is not present in our menu") 
+    
+    another_item = input("you want to oder something else?: (yes/no)")
+    if another_item == " yes":
+        item_2 = input("enter your second order: ")
+        if item_2 in menu:
+            total_order += menu[item_2]
+            print(" your order", item_2, "has been taken")
+        else:
+            print("this item", item_2, "is not available yet")
+    print("your total bill is", total_order)
+
+place_order()
+    
